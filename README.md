@@ -73,7 +73,7 @@ Parses the lookup table CSV file and returns a dictionary mapping <port>,<protoc
 ### get_protocol_name(protocol_number)
 Returns the protocol name (e.g., "tcp", "udp") for a given protocol number using the socket module.
 ### parse_flow_logs(flow_log_file, lookup_table_csv, output_path=None)
-Parses flow logs, matches them with the lookup table data, and generates tag and port/protocol counts.
+Parses flow logs, matches them with the lookup table data, and generates tag and port/protocol counts in case insensitive way.
 ### generate_output_file(output_path, tag_counts, port_protocol_count)
 Creates an output file in the specified directory containing tag counts and port/protocol combination counts.
 ### main()
