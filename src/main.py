@@ -36,14 +36,16 @@ def parse_flow_logs(flow_log_file, lookup_table_csv, output_path=None):
     with open(flow_log_file, 'r') as flow_logs:
         for log in flow_logs:
             log_data = log.split(' ')
-            dst_port = log_data[6]
-            protocol = get_protocol_name(int(log_data[7]))
-            key = f'{dst_port},{protocol}'
-            if key in tag_info:
-                tag_counts[tag_info[key]] += 1
-            else:
-                tag_counts['untagged'] += 1
-            port_protocol_count[key] += 1
+            # Only process version 2 flow logs
+            if log_data[0] == '2':
+                dst_port = log_data[6]
+                protocol = get_protocol_name(int(log_data[7]))
+                key = f'{dst_port},{protocol}'
+                if key in tag_info:
+                    tag_counts[tag_info[key]] += 1
+                else:
+                    tag_counts['untagged'] += 1
+                port_protocol_count[key] += 1
     if output_path:
         generate_output_file(output_path, tag_counts, port_protocol_count)
     return tag_counts, port_protocol_count

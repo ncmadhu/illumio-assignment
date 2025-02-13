@@ -40,4 +40,11 @@ class TestFlowLogsParser(unittest.TestCase):
         self.assertEqual(1, port_protocol_count['23,tcp'])
         self.assertEqual(8, tag_counts['untagged'])
 
+    def test_g_only_version_2_support(self):
+        """validates the version 1 is ignored."""
+        tag_counts, port_protocol_count = flow_log_parser.parse_flow_logs("sample_flow_logs.txt",
+                                                                          "sample_lookup_table.csv")
+        self.assertEqual(0, tag_counts['version1'])
+        self.assertEqual(0, port_protocol_count['144,tcp'])
+
 

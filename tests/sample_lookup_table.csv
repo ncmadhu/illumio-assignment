@@ -10,3 +10,4 @@ dstport,protocol,tag
 110,tcp,email
 993,tcp,email
 143,tcp,email
+144,tcp,version1
