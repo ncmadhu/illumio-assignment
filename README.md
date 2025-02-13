@@ -51,18 +51,20 @@ dstport,protocol,tag
 Output
 The script generates an output file in the specified directory with a name like output_YYYYMMDD_HHMMSS.txt. The file contains:
 Tag Counts: A summary of tag occurrences.
-text
+```text
 Tag Counts:
 Tag,Count
 web,10
 secure_web,5
 untagged,2
+```
 Port/Protocol Combination Counts: A breakdown of port/protocol combinations and their counts.
-text
+```text
 Port/Protocol Combination Counts:
 Port,Protocol,Count
 80,tcp,10
 443,tcp,5
+```
 Functions Overview
 init_lookup_data(lookup_table_csv)
 Parses the lookup table CSV file and returns a dictionary mapping <port>,<protocol> combinations to their tags.
