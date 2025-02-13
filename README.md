@@ -30,13 +30,13 @@ python3 flow_log_parser.py --flow_log_file <FLOW_LOG_FILE> --lookup_table_csv <L
 
 ## Input File Formats
 ### Flow Logs File:
-The flow logs file should contain space-separated values where:
+The flow logs file should contain space-separated values for version 2 where:
 The 7th column represents the destination port.
 The 8th column represents the protocol number.
 ### Example:
 ```text
-log1 log2 log3 log4 log5 log6 80 6
-log1 log2 log3 log4 log5 log6 443 17
+2 log2 log3 log4 log5 log6 80 6
+2 log2 log3 log4 log5 log6 443 17
 ```
 ### Lookup Table CSV:
 The lookup table CSV should have the following columns:
