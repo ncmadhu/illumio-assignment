@@ -17,7 +17,7 @@ argparse
 functools
 datetime
 ```
-Installation
+## Installation
 Clone this repository or copy the script into your project directory.
 Ensure you have Python installed (version 3.9+).
 Install any missing dependencies using pip (if necessary).
