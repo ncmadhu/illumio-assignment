@@ -1,11 +1,11 @@
 # Flow Log Parser
 This Python script processes flow logs and matches them with a lookup table to generate tag counts and port/protocol combination counts. The results are saved to an output file with a timestamped filename.
-Features
-Parses flow logs to extract destination ports and protocols.
-Matches extracted data with a lookup table to assign tags.
-Counts occurrences of each tag and port/protocol combination.
-Generates an output file with detailed counts.
-Requirements
+## Features
+- Parses flow logs to extract destination ports and protocols.
+- Matches extracted data with a lookup table to assign tags.
+- Counts occurrences of each tag and port/protocol combination.
+- Generates an output file with detailed counts.
+## Requirements
 Python 3.9 or higher (for functools.cache).
 ## Required Python modules:
 ```text
