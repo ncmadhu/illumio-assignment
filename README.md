@@ -52,7 +52,7 @@ dstport,protocol,tag
 ```
 ## Output
 The script generates an output file in the specified directory with a name like output_YYYYMMDD_HHMMSS.txt. The file contains:
-Tag Counts: A summary of tag occurrences.
+### Tag Counts: A summary of tag occurrences.
 ```text
 Tag Counts:
 Tag,Count
@@ -60,7 +60,7 @@ web,10
 secure_web,5
 untagged,2
 ```
-Port/Protocol Combination Counts: A breakdown of port/protocol combinations and their counts.
+### Port/Protocol Combination Counts: A breakdown of port/protocol combinations and their counts.
 ```text
 Port/Protocol Combination Counts:
 Port,Protocol,Count
