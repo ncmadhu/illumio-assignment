@@ -8,6 +8,7 @@ Generates an output file with detailed counts.
 Requirements
 Python 3.9 or higher (for functools.cache).
 ## Required Python modules:
+```text
 collections
 csv
 os
@@ -15,6 +16,7 @@ socket
 argparse
 functools
 datetime
+```
 Installation
 Clone this repository or copy the script into your project directory.
 Ensure you have Python installed (version 3.9+).
